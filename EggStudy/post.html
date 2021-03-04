@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/utilities.css">
+  <title>Post One</title>
+
+ </head>
+
+<body id="home">
+  <header class="hero blog">
+    <div id="navbar" class="navbar top">
+      <h1 class="logo">
+        <span class="text-primary"><i class="fas fa-book-open"></i> Egg</span>Study
+      </h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">Egg</a></li>
+          <li><a href="index.html#cases">Egger</a></li>
+          <li><a href="index.html#blog">Eggiest</a></li>
+          <li><a href="index.html#contact">Hella Egg</a></li>
+        </ul>
+      </nav>
+    </div>
+    
+    <div class="content">
+      <h1>Blog</h1>
+    
+    </div>
+  </header>
+
+  <main>
+    <section class="post">
+      <h2>Blog Post One</h2>
+      <p class="meta">
+        <i class="fas fa-user"></i>
+      Posted by <strong>Ms Egg</strong> | March 2 2021
+    </p>
+      <img src="images/blog/blog1.jpg" alt="">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias
+        illum, animi earum ea amet sequi reiciendis sit corporis sunt
+        iusto cupiditate odio maxime adipisci cumque eligendi nemo
+        dolore id itaque?
+      </p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio nobis vitae ut libero dolores voluptatem neque commodi iusto, quaerat quod unde ullam, asperiores cupiditate nesciunt sint molestiae magnam veritatis consectetur numquam harum quasi. Sunt dolor accusantium, minus quod quos animi, officiis veniam quam quibusdam iusto qui modi enim nam ipsa exercitationem ipsum nobis esse? Quibusdam nihil et nam error rerum.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est laboriosam soluta non quae et eum eveniet. Accusantium cumque natus reprehenderit, ullam consectetur, esse perspiciatis numquam voluptas laboriosam doloribus odit suscipit quidem sequi! Recusandae iusto maxime alias magni. Nemo hic blanditiis laborum, ex mollitia rem nam beatae vero temporibus est doloremque saepe atque, error, maxime nesciunt at facere iure inventore laudantium!</p>
+    </section>
+  </main>
+
+  <!-- footer -->
+
+  <footer class="footer bg-dark">
+    <div class="social">
+      <a href="#"> <i class="fab fa-facebook fa-2x" aria-hidden="true"></i></a>
+      <a href="#"> <i class="fab fa-twitter fa-2x " aria-hidden="true"></i></a>
+      <a href="#"> <i class="fab fa-youtube fa-2x" aria-hidden="true"></i></a>
+      <a href="#"> <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+    <p>Copyright &copy; 2021 - EggStudy</p>
+  </footer>
+  <script>
+    const navbar = document.getElementById('navbar');
+     let scrolled = false;
+     // when window is scrolling a function is ran
+     window.onscroll = function () {
+       if (window.pageYOffset > 100) {
+         // the class 'top' is the transparant background
+         navbar.classList.remove('top');
+         if (!scrolled) {
+           // translate y moves things along the y axis, so pulled up 70px 
+           navbar.style.transform = 'translateY(-70px)';
+         }
+         // takes in a function i.e the parameter of time where it would put it back to 0
+         setTimeout(function () {
+           navbar.style.transform = 'translateY(0)';
+           scrolled = true;
+         }, 200);
+       } else {
+         navbar.classList.add('top');
+         scrolled = false;
+       }
+     };
+ </script>
+ <!-- script grabbed from index that is used for the navbar as well for blog since the navbar is shared, sets the navbar  -->
+</body>
+</html>
